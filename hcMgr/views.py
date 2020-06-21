@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 def index(request):
     params = {
-        'title':'Hello/Index',
+        'title':'Hello/トップページ',
         'msg':'これは、サンプルで作ったページです。',
         'goto':'next',
     }
@@ -11,7 +11,7 @@ def index(request):
 
 def next(request):
     params = {
-        'title':'Hello/Next',
+        'title':'Hello/次へ',
         'msg':'これは、もう１つのページです。',
         'goto':'index',
     }

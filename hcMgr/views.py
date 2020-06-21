@@ -3,17 +3,16 @@ from django.http import HttpResponse
 
 def index(request):
     params = {
-        'title':'Hello/トップページ',
-        'msg':'これは、サンプルで作ったページです。',
-        'goto':'next',
+        'title':'Hello/index',
+        'msg':'お名前は？',
     }
     return render(request, 'hcMgr/index.html', params)
 
-def next(request):
+def form(request):
+    msg = request.POST['msg']
     params = {
-        'title':'Hello/次へ',
-        'msg':'これは、もう１つのページです。',
-        'goto':'index',
+        'title':'Hello/Form',
+        'msg':'こんにちは' + msg + 'さん',
     }
     return render(request, 'hcMgr/index.html', params)
 # Create your views here.
